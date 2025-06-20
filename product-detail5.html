@@ -11,6 +11,8 @@
 
     <!--====== Google Font ======-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 
     <!--====== Vendor Css ======-->
     <link rel="stylesheet" href="css/vendor.css">
@@ -20,6 +22,14 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+
+    <style>
+              .logo {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    color: #333;
+  }
+    </style>
 </head>
 <body class="config">
     <div class="preloader is-active">
@@ -43,142 +53,18 @@
 
                         <!--====== Main Logo ======-->
 
-                        <a class="main-logo" href="index.html">
+                        <div class="primary-nav">
 
-                            <img src="images/logo/logo-1.png" alt=""></a>
+                            <!--====== Main Logo ======-->
+    
+                            <h1 class="logo">LoukaArty</h1>
                         <!--====== End - Main Logo ======-->
 
 
-                        <!--====== Search Form ======-->
-                        <form class="main-form">
-
-                            <label for="main-search"></label>
-
-                            <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Search">
-
-                            <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
-                        <!--====== End - Search Form ======-->
-
-
-                        <!--====== Dropdown Main plugin ======-->
-                        <div class="menu-init" id="navigation">
-
-                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs" type="button"></button>
-
-                            <!--====== Menu ======-->
-                            <div class="ah-lg-mode">
-
-                                <span class="ah-close">✕ Close</span>
-
-                                <!--====== List ======-->
-                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Account">
-
-                                        <a><i class="far fa-user-circle"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li>
-
-                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
-
-                                                    <span>Account</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
-
-                                                    <span>Signup</span></a></li>
-                                            <li>
-
-                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
-
-                                                    <span>Signin</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
-
-                                                    <span>Signout</span></a></li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Settings">
-
-                                        <a><i class="fas fa-user-cog"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Language<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:120px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">ENGLISH</a></li>
-                                                    <li>
-
-                                                        <a>ARABIC</a></li>
-                                                    <li>
-
-                                                        <a>FRANCAIS</a></li>
-                                                    <li>
-
-                                                        <a>ESPANOL</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Currency<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:225px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">$ - US DOLLAR</a></li>
-                                                    <li>
-
-                                                        <a>£ - BRITISH POUND STERLING</a></li>
-                                                    <li>
-
-                                                        <a>€ - EURO</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Contact">
-
-                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Mail">
-
-                                        <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
-                                </ul>
-                                <!--====== End - List ======-->
-                            </div>
-                            <!--====== End - Menu ======-->
-                        </div>
-                        <!--====== End - Dropdown Main plugin ======-->
-                    </div>
-                    <!--====== End - Primary Nav ======-->
-                </div>
             </nav>
             <!--====== End - Nav 1 ======-->
 
         </header>
-        <!--====== End - Main Header ======-->
-
-
         <!--====== App Content ======-->
         <div class="app-content">
 
@@ -289,17 +175,17 @@
                              
                                 <div class="u-s-m-b-15">
 
-                                    <span class="pd-detail__label u-s-m-b-8">Product Policy:</span>
+                                    <span class="pd-detail__label u-s-m-b-8">Politique du produit:</span>
                                     <ul class="pd-detail__policy-list">
                                         <li><i class="fas fa-check-circle u-s-m-r-8"></i>
 
-                                            <span>Buyer Protection.</span></li>
+                                            <span>✨ Créé avec tout notre amour et notre passion.</span></li>
                                         <li><i class="fas fa-check-circle u-s-m-r-8"></i>
 
-                                            <span>Full Refund if you don't receive your order.</span></li>
+                                            <span>🖐️ Fait main avec soin par des artisans passionnés.</span></li>
                                         <li><i class="fas fa-check-circle u-s-m-r-8"></i>
 
-                                            <span>Returns accepted if product not as described.</span></li>
+                                            <span>📦 Livraison garantie</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -339,28 +225,26 @@
                                                 <h4>PRODUCT INFORMATION</h4>
                                             </div>
                                             <div class="u-s-m-b-15">
-                                                <div class="pd-table gl-scroll">
-                                                    <table>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Main Material</td>
-                                                                <td>Cotton</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Color</td>
-                                                                <td>Green, Blue, Red</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Sleeves</td>
-                                                                <td>Long Sleeve</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Top Fit</td>
-                                                                <td>Regular</td>
-                                                            </tr>
-                                                           
-                                                        </tbody>
-                                                    </table>
+                                                <div class="u-s-m-b-15">
+                                                    <div class="pd-table gl-scroll">
+                                                        <table>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Matière principale</td>
+                                                                    <td>Perles</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Couleurs</td>
+                                                                    <td>Vert, Bleu, Rouge (autres couleurs disponibles)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Taille</td>
+                                                                    <td>150 × 120 cm</td>
+                                                                </tr>
+                                                             
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

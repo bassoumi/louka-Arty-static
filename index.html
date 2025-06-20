@@ -10,7 +10,9 @@
     <title>Ludus - Electronics, Apparel, Computers, Books, DVDs & more</title>
 
     <!--====== Google Font ======-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
 
     <!--====== Vendor Css ======-->
     <link rel="stylesheet" href="css/vendor.css">
@@ -20,6 +22,245 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+
+    <style>
+        .logo {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    color: #333;
+  }/* Deal of the Day Section */
+.u-s-p-b-60 {
+  padding-bottom: 60px;
+  background: var(--soft-pink);
+}
+
+/* Section Title Customization */
+.section__heading[data-deal-title] {
+  color: var(--dark-pink) !important;
+  text-shadow: 2px 2px 4px rgba(199, 21, 133, 0.1);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section__heading[data-deal-title]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: var(--primary-pink);
+  border-radius: 2px;
+}
+
+.section__span.u-c-silver {
+  color: var(--primary-pink) !important;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Product Card Enhancements */
+.product-o {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(249, 85, 167, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-o:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(204, 44, 124, 0.745);
+}
+
+/* Countdown Timer Styling */
+.countdown--style-special {
+  background: var(--secondary-pink);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--dark-pink);
+  border: 2px solid var(--primary-pink);
+}
+
+/* Product Action Buttons */
+.product-o__action-list {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(199, 21, 134, 0.666);
+}
+
+.product-o__action-list a {
+  color: var(--dark-pink) !important;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+}
+
+.product-o__action-list a:hover {
+  color: var(--accent-pink) !important;
+  transform: scale(1.15);
+}
+
+/* Product Details Styling */
+.product-o__category a {
+  color: var(--primary-pink) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.product-o__name a {
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+.product-o__name a:hover {
+  color: var(--dark-pink) !important;
+}
+
+.product-o__price {
+  color: var(--accent-pink);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Rating Stars */
+.gl-rating-style .fas.fa-star {
+  color: var(--primary-pink);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-o {
+    margin-bottom: 20px;
+  }
+  
+  .countdown--style-special {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+}
+
+/* Hover Effect for Product Images */
+.aspect--bg-grey {
+  background: var(--secondary-pink) !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.aspect__img {
+  transition: transform 0.5s ease;
+}
+
+.product-o:hover .aspect__img {
+  transform: scale(1.05);
+}
+
+/* Ribbon Badge */
+.product-o::before {
+  content: "DEAL!";
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: var(--accent-pink);
+  color: white;
+  padding: 8px 35px;
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(199, 21, 134, 0.615);
+}
+.btn-load-more {
+  background-color: #ff69b4; /* rose */
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: white;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+}
+
+
+/* Version mobile (max 767px) */
+@media (max-width: 767px) {
+  .s-skeleton--h-600 {
+    height: 300px !important;
+  }
+  
+  .slider-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .slider-content span {
+    display: block;
+    line-height: 1.4;
+  }
+  
+  .content-span-1 {
+    font-size: 14px !important;
+  }
+  
+  .content-span-2 {
+    font-size: 22px !important;
+    margin: 5px 0 !important;
+  }
+  
+  .content-span-3 {
+    font-size: 16px !important;
+  }
+  
+  .content-span-4 {
+    font-size: 12px !important;
+  }
+  
+  .shop-now-link {
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+    margin-top: 10px !important;
+  }
+}
+
+/* Très petits écrans (max 480px) */
+@media (max-width: 480px) {
+  .s-skeleton--h-600 {
+    height: 250px !important;
+  }
+  
+  .content-span-1 {
+    font-size: 18px !important;
+  }
+  
+  .content-span-2 {
+    font-size: 25px !important;
+  }
+  
+  .content-span-3 {
+    font-size: 18px !important;
+  }
+  
+  .shop-now-link {
+    padding: 6px 16px !important;
+  }
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    color: #333;
+  }
+    </style>
 </head>
 <body class="config">
     <div class="preloader is-active">
@@ -43,134 +284,17 @@
 
                         <!--====== Main Logo ======-->
 
-                        <a class="main-logo" href="index.html">
+                        <h1 class="logo">LoukaArty</h1>
 
-                            <img src="images/logo/logo-1.png" alt=""></a>
                         <!--====== End - Main Logo ======-->
 
 
-                        <!--====== Search Form ======-->
-                        <form class="main-form">
+                       
 
-                            <label for="main-search"></label>
-
-                            <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Search">
-
-                            <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
-                        <!--====== End - Search Form ======-->
+            
 
 
-                        <!--====== Dropdown Main plugin ======-->
-                        <div class="menu-init" id="navigation">
-
-                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs" type="button"></button>
-
-                            <!--====== Menu ======-->
-                            <div class="ah-lg-mode">
-
-                                <span class="ah-close">✕ Close</span>
-
-                                <!--====== List ======-->
-                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Account">
-
-                                        <a><i class="far fa-user-circle"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li>
-
-                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
-
-                                                    <span>Account</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
-
-                                                    <span>Signup</span></a></li>
-                                            <li>
-
-                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
-
-                                                    <span>Signin</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
-
-                                                    <span>Signout</span></a></li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Settings">
-
-                                        <a><i class="fas fa-user-cog"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Language<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:120px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">ENGLISH</a></li>
-                                                    <li>
-
-                                                        <a>ARABIC</a></li>
-                                                    <li>
-
-                                                        <a>FRANCAIS</a></li>
-                                                    <li>
-
-                                                        <a>ESPANOL</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Currency<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:225px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">$ - US DOLLAR</a></li>
-                                                    <li>
-
-                                                        <a>£ - BRITISH POUND STERLING</a></li>
-                                                    <li>
-
-                                                        <a>€ - EURO</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Contact">
-
-                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Mail">
-
-                                        <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
-                                </ul>
-                                <!--====== End - List ======-->
-                            </div>
-                            <!--====== End - Menu ======-->
-                        </div>
-                        <!--====== End - Dropdown Main plugin ======-->
-                    </div>
-                    <!--====== End - Primary Nav ======-->
+                               
                 </div>
             </nav>
             <!--====== End - Nav 1 ======-->
@@ -293,9 +417,9 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 u-s-m-b-30">
                     <div class="product-o product-o--radius product-o--hover-off u-h-100">
-                        <div class="product-o__wrap">
+                        <div class="product-o__wrap" href="product-detail11.html">
 
-                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail11.html">
 
                                 <img class="aspect__img" src="images/backend/2025-04-17T14-02-59-503Z-473819173_17884165548198400_1101115346492682094_n.jpg" alt=""></a>
                            
@@ -303,16 +427,10 @@
                                 <ul class="product-o__action-list">
                                     <li>
 
-                                        <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
-                                    <li>
+                                        <a data-modal="modal"  href="product-detail11.html"   data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
 
-                                        <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a></li>
-                                    <li>
 
-                                        <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li>
-
-                                        <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
+                                     
                                 </ul>
                             </div>
                         </div>
@@ -337,7 +455,7 @@
                     <div class="product-o product-o--radius product-o--hover-off u-h-100">
                         <div class="product-o__wrap">
 
-                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                            <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail3.html">
 
                                 <img class="aspect__img" src="images/backend/2025-03-29T12-53-57-785Z-Capture d’écran 2025-02-19 173615.png" alt=""></a>
                            
@@ -345,16 +463,8 @@
                                 <ul class="product-o__action-list">
                                     <li>
 
-                                        <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
-                                    <li>
-
-                                        <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a></li>
-                                    <li>
-
-                                        <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                    <li>
-
-                                        <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
+                                        <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" href="product-detail3.html" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -417,23 +527,15 @@
                                             <div class="product-o product-o--hover-on product-o--radius">
                                                 <div class="product-o__wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail1.html">
 
                                                         <img class="aspect__img" src="images/backend//504336332_17901646725198400_3686573543544250598_n.jpg" alt=""></a>
                                                     <div class="product-o__action-wrap">
                                                         <ul class="product-o__action-list">
                                                             <li>
 
-                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
-                                                            <li>
-
-                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
+                                                                <a data-modal="modal" data-modal-id="#quick-look"  href="product-detail1.html" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
+                                              
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -458,24 +560,15 @@
                                             <div class="product-o product-o--hover-on product-o--radius">
                                                 <div class="product-o__wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail6.html">
 
                                                         <img class="aspect__img" src="images/backend/Capture d’écran 2025-02-19 173530.png" alt=""></a>
                                                     <div class="product-o__action-wrap">
                                                         <ul class="product-o__action-list">
                                                             <li>
 
-                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
-                                                            <li>
-
-                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
-                                                        </ul>
+                                                                <a data-modal="modal" data-modal-id="#quick-look"  href="product-detail6.html" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
+                                                            </ul>
                                                     </div>
                                                 </div>
 
@@ -501,24 +594,14 @@
                                             <div class="product-o product-o--hover-on product-o--radius">
                                                 <div class="product-o__wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail5.html">
 
                                                         <img class="aspect__img" src="images/backend/Capture d’écran 2025-02-19 173743.png" alt=""></a>
                                                     <div class="product-o__action-wrap">
                                                         <ul class="product-o__action-list">
                                                             <li>
-
-                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
-                                                            <li>
-
-                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
-                                                        </ul>
+                                                                <a data-modal="modal" data-modal-id="#quick-look"  href="product-detail5.html" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
+                          </ul>
                                                     </div>
                                                 </div>
 
@@ -544,23 +627,12 @@
                                             <div class="product-o product-o--hover-on product-o--radius">
                                                 <div class="product-o__wrap">
 
-                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail3.html">
 
                                                         <img class="aspect__img" src="images/backend/2025-04-17T13-58-16-929Z-468758902_122132780114447321_5766736944303350325_n-removebg-preview.png" alt=""></a>
                                                     <div class="product-o__action-wrap">
                                                         <ul class="product-o__action-list">
-                                                            <li>
-
-                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
-                                                            <li>
-
-                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Add to Cart"><i class="fas fa-plus-circle"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="fas fa-heart"></i></a></li>
-                                                            <li>
-
-                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Email me When the price drops"><i class="fas fa-envelope"></i></a></li>
+                                                            <a data-modal="modal" data-modal-id="#quick-look"  href="product-detail3.html" data-tooltip="tooltip" data-placement="top" title="Quick View"><i class="fas fa-search-plus"></i></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -616,7 +688,23 @@
         <!--====== End - Add to Cart Modal ======-->
 
 
-
+        <footer
+        style="
+          background-color: #f2c0e3 !important;
+          padding: 10px 0;
+        
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          z-index: 999;
+        "
+      >
+        <div class="container text-center">
+          <p style="font-size: 1rem; color: white; margin: 0;">
+            © 2025 <a style="color: white; font-weight: bold;">Reshop</a> – All Rights Reserved
+          </p>
+        </div>
+      </footer>
     </div>
     <!--====== End - Main App ======-->
 
