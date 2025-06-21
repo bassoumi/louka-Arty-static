@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="images/favicon.png" rel="shortcut icon">
-    <title>Ludus - Electronics, Apparel, Computers, Books, DVDs & more</title>
+    <link href="images/backend/2025-04-17T14-39-01-337Z-465646989_122128088036447321_9141622150576571899_n.jpg" rel="shortcut icon">
+    <title>Louka Arty – about</title>
 
     <!--====== Google Font ======-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
 
     <!--====== Vendor Css ======-->
     <link rel="stylesheet" href="css/vendor.css">
@@ -20,164 +22,293 @@
 
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
+
+    <style>
+
+.u-s-p-b-60 {
+  padding-bottom: 60px;
+  background: var(--soft-pink);
+}
+
+/* Section Title Customization */
+.section__heading[data-deal-title] {
+  color: var(--dark-pink) !important;
+  text-shadow: 2px 2px 4px rgba(199, 21, 133, 0.1);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section__heading[data-deal-title]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: var(--primary-pink);
+  border-radius: 2px;
+}
+
+.section__span.u-c-silver {
+  color: var(--primary-pink) !important;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Product Card Enhancements */
+.product-o {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(249, 85, 167, 0.1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(193, 81, 137, 0.745);
+
+}
+
+.product-o:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(204, 44, 124, 0.745);
+}
+
+/* Countdown Timer Styling */
+.countdown--style-special {
+  background: var(--secondary-pink);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--dark-pink);
+  border: 2px solid var(--primary-pink);
+}
+
+/* Product Action Buttons */
+.product-o__action-list {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(199, 21, 134, 0.666);
+}
+
+.product-o__action-list a {
+  color: var(--dark-pink) !important;
+  transition: all 0.3s ease;
+  margin: 0 8px;
+}
+
+.product-o__action-list a:hover {
+  color: var(--accent-pink) !important;
+  transform: scale(1.15);
+}
+
+/* Product Details Styling */
+.product-o__category a {
+  color: var(--primary-pink) !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.product-o__name a {
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+.product-o__name a:hover {
+  color: var(--dark-pink) !important;
+}
+
+.product-o__price {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-o {
+    margin-bottom: 20px;
+  }
+  
+  .countdown--style-special {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+}
+
+/* Hover Effect for Product Images */
+.aspect--bg-grey {
+  background: var(--secondary-pink) !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.aspect__img {
+  transition: transform 0.5s ease;
+}
+
+.product-o:hover .aspect__img {
+  transform: scale(1.05);
+}
+
+/* Ribbon Badge */
+.product-o::before {
+  content: "DEAL!";
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: var(--accent-pink);
+  color: white;
+  padding: 8px 35px;
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(199, 21, 134, 0.615);
+}
+.btn-load-more {
+  background-color: #ff69b4; /* rose */
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-load-more:hover {
+  background-color: white;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+}
+
+
+/* Version mobile (max 767px) */
+@media (max-width: 767px) {
+  .s-skeleton--h-600 {
+    height: 300px !important;
+  }
+  
+  .slider-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .slider-content span {
+    display: block;
+    line-height: 1.4;
+  }
+  
+  .content-span-1 {
+    font-size: 14px !important;
+  }
+  
+  .content-span-2 {
+    font-size: 22px !important;
+    margin: 5px 0 !important;
+  }
+  
+  .content-span-3 {
+    font-size: 16px !important;
+  }
+  
+  .content-span-4 {
+    font-size: 12px !important;
+  }
+  
+  .shop-now-link {
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+    margin-top: 10px !important;
+  }
+}
+
+/* Très petits écrans (max 480px) */
+
+
+.content-span-1 {
+    margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: block;
+ }
+
+  .content-span-2 {
+    font-weight: 800;
+    font-size: 3.25rem !important;
+    display: block;
+    color: #ffffff; /* ou une autre couleur de fond du texte */
+    -webkit-text-stroke: 1px #000000; /* bordure noire autour de chaque lettre */
+  }
+  
+
+.content-span-3 {
+  display: block;
+  font-size: 1.875rem!important;
+  margin-bottom: 8px; 
+  color: #ffffff; /* ou une autre couleur de fond du texte */
+  -webkit-text-stroke: 0.5px #000000; }
+
+.content-span-4 {
+  display: block;
+  font-weight: 600;
+  font-size: 1.875rem;
+  margin-bottom: 20px;
+  display: block;
+ }
+  .content-span-4 span {
+    font-weight: 700;
+    margin-left: 4px;
+    font-size: 1.375rem; }
+
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  color: #e3dcdc; /* Fill color */
+  -webkit-text-stroke: 0.1px rgb(85, 82, 82); /* Black border around each letter */
+}
+
+    </style>
 </head>
 <body class="config">
-    <div class="preloader is-active">
-        <div class="preloader__wrap">
+  
 
-            <img class="preloader__img" src="images/preloader.png" alt=""></div>
-    </div>
 
     <!--====== Main App ======-->
     <div id="app">
 
-        <!--====== Main Header ======-->
         <header class="header--style-1">
-
             <!--====== Nav 1 ======-->
             <nav class="primary-nav primary-nav-wrapper--border">
-                <div class="container">
+              <div class="container">
+                <!--====== Primary Nav ======-->
+                <div class="primary-nav">
+                  <!-- Left: Text logo -->
+                  <h1 class="logo">LoukaArty</h1>
+          
+                  <!-- Center: Nav links -->
+                  <div class="nav-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="shop-grid-full.html">Shop</a>
+                    <a href="about.html">about</a>
 
-                    <!--====== Primary Nav ======-->
-                    <div class="primary-nav">
-
-                        <!--====== Main Logo ======-->
-
-                        <a class="main-logo" href="index.html">
-
-                            <img src="images/logo/logo-1.png" alt=""></a>
-                        <!--====== End - Main Logo ======-->
-
-
-                        <!--====== Search Form ======-->
-                        <form class="main-form">
-
-                            <label for="main-search"></label>
-
-                            <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Search">
-
-                            <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
-                        <!--====== End - Search Form ======-->
-
-
-                        <!--====== Dropdown Main plugin ======-->
-                        <div class="menu-init" id="navigation">
-
-                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs" type="button"></button>
-
-                            <!--====== Menu ======-->
-                            <div class="ah-lg-mode">
-
-                                <span class="ah-close">✕ Close</span>
-
-                                <!--====== List ======-->
-                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Account">
-
-                                        <a><i class="far fa-user-circle"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li>
-
-                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
-
-                                                    <span>Account</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
-
-                                                    <span>Signup</span></a></li>
-                                            <li>
-
-                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
-
-                                                    <span>Signin</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
-
-                                                    <span>Signout</span></a></li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Settings">
-
-                                        <a><i class="fas fa-user-cog"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Language<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:120px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">ENGLISH</a></li>
-                                                    <li>
-
-                                                        <a>ARABIC</a></li>
-                                                    <li>
-
-                                                        <a>FRANCAIS</a></li>
-                                                    <li>
-
-                                                        <a>ESPANOL</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Currency<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:225px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">$ - US DOLLAR</a></li>
-                                                    <li>
-
-                                                        <a>£ - BRITISH POUND STERLING</a></li>
-                                                    <li>
-
-                                                        <a>€ - EURO</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Contact">
-
-                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Mail">
-
-                                        <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
-                                </ul>
-                                <!--====== End - List ======-->
-                            </div>
-                            <!--====== End - Menu ======-->
-                        </div>
-                        <!--====== End - Dropdown Main plugin ======-->
-                    </div>
-                    <!--====== End - Primary Nav ======-->
+                  </div>
+          
+                  <!-- Right: Image logo -->
+                  <img
+                    src="images/backend/ChatGPT_Image_Jun_21__2025__01_13_42_PM-removebg-preview.png"
+                    alt="LoukaArty Logo"
+                    class="logo-image"
+                  />
                 </div>
+                <!--====== End - Primary Nav ======-->
+              </div>
             </nav>
             <!--====== End - Nav 1 ======-->
-
-
-           
-        </header>
+          </header>
         <!--====== End - Main Header ======-->
 
         <!--====== App Content ======-->
@@ -206,203 +337,9 @@
             </div>
             <!--====== End - Section 1 ======-->
 
-
-            <!--====== Section 2 ======-->
-            <div class="u-s-p-b-60">
-
-                <!--====== Section Content ======-->
-                <div class="section__content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="about">
-                                    <div class="about__container">
-                                        <div class="about__info">
-                                            <h2 class="about__h2">Welcome to Reshop Store!</h2>
-                                            <div class="about__p-wrap">
-                                                <p class="about__p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                            </div>
-
-                                            <a class="about__link btn--e-secondary" href="index.html" target="_blank">Shop Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Content ======-->
-            </div>
-            <!--====== End - Section 2 ======-->
-
-
-            <!--====== Section 3 ======-->
-            <div class="u-s-p-b-60">
-
-                <!--====== Section Intro ======-->
-                <div class="section__intro u-s-m-b-46">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary">Our Team Members</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Intro ======-->
-
-
-                <!--====== Section Content ======-->
-                <div class="section__content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-1.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Ahnan Bashri</span>
-
-                                        <span class="team-member__job-title">Manager</span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-2.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Joseph Min</span>
-
-                                        <span class="team-member__job-title">UI, Designer</span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-3.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Mike Pipe</span>
-
-                                        <span class="team-member__job-title">App, Architect</span></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-sm-6 u-s-m-b-30">
-                                <div class="team-member u-h-100">
-                                    <div class="team-member__wrap">
-                                        <div class="aspect aspect--bg-grey-fb aspect--square">
-
-                                            <img class="aspect__img team-member__img" src="images/about/member-4.jpg" alt=""></div>
-                                        <div class="team-member__social-wrap">
-                                            <ul class="team-member__social-list">
-                                                <li>
-
-                                                    <a class="s-tw--bgcolor-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-fb--bgcolor-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-insta--bgcolor-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                                <li>
-
-                                                    <a class="s-linked--bgcolor-hover" href="#"><i class="fab fa-linkedin"></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="team-member__info">
-
-                                        <span class="team-member__name">Klronr Jim</span>
-
-                                        <span class="team-member__job-title">Team Leader</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--====== End - Section Content ======-->
-            </div>
-            <!--====== End - Section 3 ======-->
-
-
-            <!--====== Section 4 ======-->
             <div class="u-s-p-b-90 u-s-m-b-30">
 
-                <!--====== Section Intro ======-->
-                <div class="section__intro u-s-m-b-46">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section__text-wrap">
-                                    <h1 class="section__heading u-c-secondary u-s-m-b-12">CLIENTS FEEDBACK</h1>
-
-                                    <span class="section__span u-c-silver">WHAT OUR CLIENTS SAY</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             
                 <!--====== End - Section Intro ======-->
 
 
@@ -416,59 +353,21 @@
                                 <div class="testimonial">
                                     <div class="testimonial__img-wrap">
 
-                                        <img class="testimonial__img" src="images/about/test-1.jpg" alt=""></div>
+                                        <img class="testimonial__img" src="images/backend/420330225_808793684398432_6654884137984868627_n.jpg" alt=""></div>
                                     <div class="testimonial__content-wrap">
 
                                         <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
                                         <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
+                                            <p>🎨 Louka Arty est une marque 100 % tunisienne 🇹🇳, créée par Malek Mejri, une jeune entrepreneure passionnée 💪.
+                                                👜 La boutique propose des sacs et accessoires en perles ✨, ainsi que des sacs personnalisés 🎁, alliant élégance artisanale 🧵 et originalité 🌟.</p>
                                         </blockquote>
 
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
+                                        <span class="testimonial__author">Malek M. / Fondatrice de Louka Arty</span>
                                     </div>
                                 </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-2.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-3.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
-                                <div class="testimonial">
-                                    <div class="testimonial__img-wrap">
-
-                                        <img class="testimonial__img" src="images/about/test-4.jpg" alt=""></div>
-                                    <div class="testimonial__content-wrap">
-
-                                        <span class="testimonial__double-quote"><i class="fas fa-quote-right"></i></span>
-                                        <blockquote class="testimonial__block-quote">
-                                            <p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-                                        </blockquote>
-
-                                        <span class="testimonial__author">John D. / DVNTR Inc.</span>
-                                    </div>
-                                </div>
+                               
+                    
+                        
                             </div>
                         </div>
                         <!--====== End - Testimonial Slider ======-->
@@ -476,168 +375,20 @@
                 </div>
                 <!--====== End - Section Content ======-->
             </div>
+    
+
+            <!--====== Section 3 ======-->
+           
+
+
+            <!--====== Section 4 ======-->
+         
             <!--====== End - Section 4 ======-->
         </div>
         <!--====== End - App Content ======-->
 
 
-        <!--====== Main Footer ======-->
-        <footer>
-            <div class="outer-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="outer-footer__content u-s-m-b-40">
-
-                                <span class="outer-footer__content-title">Contact Us</span>
-                                <div class="outer-footer__text-wrap"><i class="fas fa-home"></i>
-
-                                    <span>4247 Ashford Drive Virginia VA-20006 USA</span></div>
-                                <div class="outer-footer__text-wrap"><i class="fas fa-phone-volume"></i>
-
-                                    <span>(+0) 900 901 904</span></div>
-                                <div class="outer-footer__text-wrap"><i class="far fa-envelope"></i>
-
-                                    <span>contact@domain.com</span></div>
-                                <div class="outer-footer__social">
-                                    <ul>
-                                        <li>
-
-                                            <a class="s-fb--color-hover" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li>
-
-                                            <a class="s-tw--color-hover" href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li>
-
-                                            <a class="s-youtube--color-hover" href="#"><i class="fab fa-youtube"></i></a></li>
-                                        <li>
-
-                                            <a class="s-insta--color-hover" href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li>
-
-                                            <a class="s-gplus--color-hover" href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="outer-footer__content u-s-m-b-40">
-
-                                        <span class="outer-footer__content-title">Information</span>
-                                        <div class="outer-footer__list-wrap">
-                                            <ul>
-                                                <li>
-
-                                                    <a href="cart.html">Cart</a></li>
-                                                <li>
-
-                                                    <a href="dashboard.html">Account</a></li>
-                                                <li>
-
-                                                    <a href="shop-side-version-2.html">Manufacturer</a></li>
-                                                <li>
-
-                                                    <a href="dash-payment-option.html">Finance</a></li>
-                                                <li>
-
-                                                    <a href="shop-side-version-2.html">Shop</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="outer-footer__content u-s-m-b-40">
-                                        <div class="outer-footer__list-wrap">
-
-                                            <span class="outer-footer__content-title">Our Company</span>
-                                            <ul>
-                                                <li>
-
-                                                    <a href="about.html">About us</a></li>
-                                                <li>
-
-                                                    <a href="contact.html">Contact Us</a></li>
-                                                <li>
-
-                                                    <a href="index.html">Sitemap</a></li>
-                                                <li>
-
-                                                    <a href="dash-my-order.html">Delivery</a></li>
-                                                <li>
-
-                                                    <a href="shop-side-version-2.html">Store</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="outer-footer__content">
-
-                                <span class="outer-footer__content-title">Join our Newsletter</span>
-                                <form class="newsletter">
-                                    <div class="u-s-m-b-15">
-                                        <div class="radio-box newsletter__radio">
-
-                                            <input type="radio" id="male" name="gender">
-                                            <div class="radio-box__state radio-box__state--primary">
-
-                                                <label class="radio-box__label" for="male">Male</label></div>
-                                        </div>
-                                        <div class="radio-box newsletter__radio">
-
-                                            <input type="radio" id="female" name="gender">
-                                            <div class="radio-box__state radio-box__state--primary">
-
-                                                <label class="radio-box__label" for="female">Female</label></div>
-                                        </div>
-                                    </div>
-                                    <div class="newsletter__group">
-
-                                        <label for="newsletter"></label>
-
-                                        <input class="input-text input-text--only-white" type="text" id="newsletter" placeholder="Enter your Email">
-
-                                        <button class="btn btn--e-brand newsletter__btn" type="submit">SUBSCRIBE</button></div>
-
-                                    <span class="newsletter__text">Subscribe to the mailing list to receive updates on promotions, new arrivals, discount and coupons.</span>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lower-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="lower-footer__content">
-                                <div class="lower-footer__copyright">
-
-                                    <span>Copyright © 2018</span>
-
-                                    <a href="index.html">Reshop</a>
-
-                                    <span>All Right Reserved</span></div>
-                                <div class="lower-footer__payment">
-                                    <ul>
-                                        <li><i class="fab fa-cc-stripe"></i></li>
-                                        <li><i class="fab fa-cc-paypal"></i></li>
-                                        <li><i class="fab fa-cc-mastercard"></i></li>
-                                        <li><i class="fab fa-cc-visa"></i></li>
-                                        <li><i class="fab fa-cc-discover"></i></li>
-                                        <li><i class="fab fa-cc-amex"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+       
     </div>
     <!--====== End - Main App ======-->
 
