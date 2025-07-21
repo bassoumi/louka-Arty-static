@@ -1,29 +1,41 @@
 pipeline {
-  agent {
-    dockerContainer {
-      image 'my-jenkins-agent-with-docker'
-      dockerHost 'tcp://host.docker.internal:2376'
-      // if your workspace inside is different, you can also set:
-      // remoteFs '/home/jenkins/agent'
-    }
+  agent any
+
+  environment {
+    DOCKERHUB = credentials('dockerhub-creds')
+    IMAGE     = "yourdockerhubuser/static-site"
+    TAG       = "${env.BUILD_NUMBER}"
   }
 
   stages {
-    stage('Build Docker Image') {
+    stage('Checkout') {
+      steps { checkout scm }
+    }
+
+    stage('Build & Tag') {
       steps {
-        sh 'docker version'                         // verify client+daemon connectivity
-        sh 'docker build -t louka-static-site .'
+        sh """
+          docker build -t ${IMAGE}:${TAG} .
+        """
       }
     }
 
-    stage('Run Docker Container') {
+    stage('Push') {
       steps {
-        sh '''
-          docker stop louka-site || true
-          docker rm louka-site || true
-          docker run -d --name louka-site -p 8080:12345 louka-static-site
-        '''
+        sh """
+          echo "$DOCKERHUB_PSW" | docker login \
+            --username "$DOCKERHUB_USR" \
+            --password-stdin
+          docker push ${IMAGE}:${TAG}
+        """
       }
+    }
+  }
+
+  post {
+    always {
+      cleanWs()
+      sh 'docker image prune -f'
     }
   }
 }

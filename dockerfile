@@ -1,17 +1,7 @@
-# Use Node.js base image
-FROM node:18-alpine
+# start from the tiny Apache HTTPD Alpine image
+FROM httpd:alpine
 
-# Install a lightweight static file server
-RUN npm install -g http-server
+# copy your static site into the default doc root
+COPY . /usr/local/apache2/htdocs/
 
-# Set working directory
-WORKDIR /app
-
-# Copy your static files to the container
-COPY . .
-
-# Expose port
-EXPOSE 12345
-
-# Serve the files
-CMD ["http-server", "-p", "12345"]
+# (the base image EXPOSEs port 80 for you)
