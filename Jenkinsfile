@@ -13,7 +13,6 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        // Pull from your GitHub project
         checkout scm
       }
     }
@@ -40,8 +39,7 @@ pipeline {
 
   post {
     always {
-      // re‑enter a node context so cleanWs() has a workspace to work on
-      node {
+      steps {
         echo "Cleaning workspace and pruning dangling images…"
         cleanWs()
         sh 'docker image prune -f'
