@@ -1,24 +1,23 @@
 pipeline {
   agent {
     dockerContainer {
-      // the official Docker image that has the CLI baked in
-      image 'docker:20.10.16'
-      // mount the host’s docker.sock so the CLI can talk to your daemon
-      args  '-v /var/run/docker.sock:/var/run/docker.sock'
+      image 'my-jenkins-agent-with-docker'
+      dockerHost 'tcp://host.docker.internal:2376'
+      // if your workspace inside is different, you can also set:
+      // remoteFs '/home/jenkins/agent'
     }
   }
 
   stages {
     stage('Build Docker Image') {
       steps {
-        echo 'Building Docker image...'
+        sh 'docker version'                         // verify client+daemon connectivity
         sh 'docker build -t louka-static-site .'
       }
     }
 
     stage('Run Docker Container') {
       steps {
-        echo 'Running Docker container...'
         sh '''
           docker stop louka-site || true
           docker rm louka-site || true
@@ -26,10 +25,5 @@ pipeline {
         '''
       }
     }
-  }
-
-  post {
-    success { echo '✅ Build and container startup successful!' }
-    failure { echo '❌ Build failed!' }
   }
 }
