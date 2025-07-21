@@ -15,9 +15,18 @@ pipeline {
                 sh '''
                     docker stop louka-site || true
                     docker rm louka-site || true
-                    docker run -d --name louka-site -p 8080:8080 louka-static-site
+                    docker run -d --name louka-site -p 8080:12345 louka-static-site
                 '''
             }
+        }
+    }
+
+    post {
+        success {
+            echo '✅ Build and container startup successful!'
+        }
+        failure {
+            echo '❌ Build failed!'
         }
     }
 }
