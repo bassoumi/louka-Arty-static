@@ -1,49 +1,40 @@
 pipeline {
   agent any
 
-  environment {
-    // Jenkins credential (username/password or token) for Docker Hub
-    DOCKERHUB = credentials('dockerhub-creds')
-    // Your Docker Hub namespace/repo
-    IMAGE     = "yourdockerhubuser/static-site"
-    // Tag the image with the Jenkins build number
-    TAG       = "${env.BUILD_NUMBER}"
-  }
-
   stages {
     stage('Checkout') {
       steps {
+        // clone your GitHub project
         checkout scm
       }
     }
 
-    stage('Build & Tag Docker Image') {
+    stage('Build Docker Image') {
       steps {
-        sh """
-          docker build -t ${IMAGE}:${TAG} .
-        """
+        // build & tag locally
+        sh 'docker build -t static-site:latest .'
       }
     }
 
-    stage('Push to Docker Hub') {
+    stage('Smoke Test') {
       steps {
-        sh """
-          echo "$DOCKERHUB_PSW" | docker login \
-            --username "$DOCKERHUB_USR" \
-            --password-stdin
-          docker push ${IMAGE}:${TAG}
-        """
+        // verify the image runs (prints Nginx version or similar)
+        sh '''
+          CONTAINER=$(docker run -d static-site:latest)
+          echo "Ran container $CONTAINER"
+          docker logs $CONTAINER || true
+          docker rm -f $CONTAINER
+        '''
       }
     }
   }
 
   post {
     always {
-      steps {
-        echo "Cleaning workspace and pruning dangling images…"
-        cleanWs()
-        sh 'docker image prune -f'
-      }
+      echo 'Cleaning workspace & pruning images…'
+      cleanWs()
+      // remove dangling images
+      sh 'docker image prune -f'
     }
   }
 }
