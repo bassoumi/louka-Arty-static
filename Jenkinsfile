@@ -1,12 +1,10 @@
 pipeline {
-  /*  
-   * This uses the official Docker image (which includes `docker`), 
-   * and gives it access to the host daemon via the socket.
-   */
   agent {
-    docker {
-      image 'docker:20.10.16'                                     
-      args  '-v /var/run/docker.sock:/var/run/docker.sock'        
+    dockerContainer {
+      // the official Docker image that has the CLI baked in
+      image 'docker:20.10.16'
+      // mount the host’s docker.sock so the CLI can talk to your daemon
+      args  '-v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
 
