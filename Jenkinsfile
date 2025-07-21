@@ -1,40 +1,35 @@
 pipeline {
-  agent any
+  agent any         // or replace with your specific node label
 
   stages {
-    stage('Checkout') {
+    stage('Build') {
       steps {
-        // clone your GitHub project
-        checkout scm
-      }
-    }
-
-    stage('Build Docker Image') {
-      steps {
-        // build & tag locally
-        sh 'docker build -t static-site:latest .'
-      }
-    }
-
-    stage('Smoke Test') {
-      steps {
-        // verify the image runs (prints Nginx version or similar)
+        echo "Building..."
         sh '''
-          CONTAINER=$(docker run -d static-site:latest)
-          echo "Ran container $CONTAINER"
-          docker logs $CONTAINER || true
-          docker rm -f $CONTAINER
+          # put your build commands here
+          ls -la
         '''
       }
     }
-  }
 
-  post {
-    always {
-      echo 'Cleaning workspace & pruning images…'
-      cleanWs()
-      // remove dangling images
-      sh 'docker image prune -f'
+    stage('Test') {
+      steps {
+        echo "Testing..."
+        sh '''
+          # put your test commands here
+          echo "Test passed!"
+        '''
+      }
+    }
+
+    stage('Deliver') {
+      steps {
+        echo "Deliver..."
+        sh '''
+          # put your delivery commands here (or leave empty)
+          echo "All done!"
+        '''
+      }
     }
   }
 }
